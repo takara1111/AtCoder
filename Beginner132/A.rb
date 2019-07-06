@@ -1,3 +1,2 @@
 s = gets.chomp
-
-p s
+arr = s.chars.sort
