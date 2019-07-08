@@ -1,7 +1,6 @@
-a = gets.to_i
-b = gets.to_i
+a, b = gets.chomp.split.map(&:to_i)
 
-if a % b == 0
+if (a * b) % 2 == 0
   puts "Even"
 else
   puts "Odd"
