@@ -1,11 +1,17 @@
 n = gets
 arr = gets.chomp.split(" ").map(&:to_i)
-max = 1000000000
+NUM = 1000000000
+max = -NUM
+min = NUM
 
 arr.each do |n|
-  if max > n
+  if max < n
     max = n
+  end
+    
+  if min > n 
+    min = n
   end
 end
 
-p max
+p max - min 
