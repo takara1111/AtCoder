@@ -4,8 +4,8 @@ module Mod
   Version="1.0.0"
 
   # インスタンスメソッド定義
-  def hello
-    puts 'はろー'
+  def hello(name)
+    puts "はろー#{name}くん"
   end
   
   # module_functionメソッドでモジュール関数にすることにより外部から呼び出し可能
@@ -17,5 +17,8 @@ end
 p Mod::Version
 
 # モジュール関数の呼び出し
-Mod.hello
+Mod.hello("たなか")
 
+# includeする
+include Mod
+hello("すずき")
